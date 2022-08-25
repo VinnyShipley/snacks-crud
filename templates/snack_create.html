@@ -3,10 +3,17 @@
 
 {% block content %}
 
-<h1>Create A Snack</h1>
+<h1 class="text-3xl">Create A Snack</h1>
 
-<form method='POST'>
+<form class="text-2xl rounded" method='POST'>
+
   {% csrf_token %}
   {{form.as_p}}
-  <input type='submit' value='SAVE'
+  <input class=" mt-3 bg-lime-400 rounded hover:opacity-50 outline rounded hover:rounded-lg" type='submit' value='SAVE'>
+
+</form>
+<br>
+
+<a class="inline-block outline rounded hover:rounded-lg mt=8" href='{% url "snacks_list" %}'>Back to list</a>
+
 {% endblock content %}

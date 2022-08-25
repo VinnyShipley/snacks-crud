@@ -3,15 +3,18 @@
 
 {% block content %}
 
-  <h2>{{snack.title}}</h2>
-  <p>Description: {{ snack.description }}</p>
-  <p>Purchaser: {{ snack.purchaser }}</p>
+  <h2 class="text-3xl my-4">{{snack.title}}</h2>
+  <p class="ml-8">Description: {{ snack.description }}</p>
+  <p class="ml-8">Purchaser: {{ snack.purchaser }}</p>
 
-  <a href='{% url "snack_delete" snack.pk %}'>Delete this snack</a>
-  <a href='{% url "snack_update" snack.pk %}'>Update this snack</a>
+  <a class="inline-block mt-10 bg-red-700 rounded hover:opacity-50" href='{% url "snack_delete" snack.pk %}'>Delete this snack</a>
 
   <br>
 
-  <a href='{% url "snacks_list" %}'>Back to list</a>
+  <a class="inline-block mt-3 bg-lime-400 rounded hover:opacity-50" href='{% url "snack_update" snack.pk %}'>Update this snack</a>
+
+  <br>
+
+  <a class="inline-block mt-5 outline rounded hover:rounded-lg " href='{% url "snacks_list" %}'>Back to list</a>
 
 {% endblock content %}

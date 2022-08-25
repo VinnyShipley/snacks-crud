@@ -3,16 +3,18 @@
 
 {% block content %}
 
-<a href='{% url "snack_create" %}'>Create New Snack</a>
+
+
+<h2 class="text-3xl underline my-4">Snack List</h2>
 
 <ul>
 {% for snack in snack_list %}
-  <li>
-    <a href='{% url "snack_detail" snack.pk %}'>{{ snack.title }}</a>
+  <li class="m-8  w-40 hover:rounded">
+    <a class="text-blue-600 bg-slate-50 text-2xl rounded hover:opacity-50" href='{% url "snack_detail" snack.pk %}'>{{ snack.title }}</a>
   </li>
 {% endfor %}
 </ul>
 
-
+<a class="text-2xl outline rounded hover:rounded-lg" href='{% url "snack_create" %}'>Create New Snack</a>
 
 {% endblock content %}
