@@ -6,7 +6,11 @@
   <h2>{{snack.title}}</h2>
   <p>Description: {{ snack.description }}</p>
   <p>Purchaser: {{ snack.purchaser }}</p>
+
   <a href='{% url "snack_delete" snack.pk %}'>Delete this snack</a>
+  <a href='{% url "snack_update" snack.pk %}'>Update this snack</a>
+
+  <br>
 
   <a href='{% url "snacks_list" %}'>Back to list</a>
 

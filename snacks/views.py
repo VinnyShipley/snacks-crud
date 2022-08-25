@@ -22,6 +22,7 @@ class SnackCreateView(CreateView):
 class SnackUpdateView(UpdateView):
   template_name = 'snack_update.html'
   model = Snack
+  fields = ['title', 'description']
   
 class SnackDeleteView(DeleteView):
   template_name = 'snack_delete.html'

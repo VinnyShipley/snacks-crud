@@ -3,14 +3,15 @@
 
 {% block content %}
 
-<ul>
+<a href='{% url "snack_create" %}'>Create New Snack</a>
 
+<ul>
 {% for snack in snack_list %}
   <li>
-    <a href='{% url 'snack_detail' snack.pk %}'>{{ snack.title }}</a>
+    <a href='{% url "snack_detail" snack.pk %}'>{{ snack.title }}</a>
   </li>
 {% endfor %}
-
+</ul>
 
 
 
