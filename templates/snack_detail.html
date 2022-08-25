@@ -2,5 +2,12 @@
 
 
 {% block content %}
-Detail Coming Soon
+
+  <h2>{{snack.title}}</h2>
+  <p>Description: {{ snack.description }}</p>
+  <p>Purchaser: {{ snack.purchaser }}</p>
+  <a href='{% url "snack_delete" snack.pk %}'>Delete this snack</a>
+
+  <a href='{% url "snacks_list" %}'>Back to list</a>
+
 {% endblock content %}

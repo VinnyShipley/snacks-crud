@@ -3,7 +3,7 @@ from .views import SnackListView, SnackDetailView, SnackDeleteView, SnackCreateV
 
 
 urlpatterns =[
-  path('list/', SnackListView.as_view(), name='snacks_list'),
+  path('', SnackListView.as_view(), name='snacks_list'),
   path('detail/<int:pk>/', SnackDetailView.as_view(), name='snack_detail'),
   path('delete/<int:pk>/', SnackDeleteView.as_view(), name='snack_delete'),
   path('create/', SnackCreateView.as_view(), name='snack_create'),
